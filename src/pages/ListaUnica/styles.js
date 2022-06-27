@@ -71,6 +71,11 @@ export const List = styled.div`
     border:2px solid black;
     border-radius:10px;
     color:black;  
+
+    @media screen and (max-width: 426px) {
+      width:90vw;
+      height:50%;
+    }
 `;
 
 export const ListPlayer = styled.ul`

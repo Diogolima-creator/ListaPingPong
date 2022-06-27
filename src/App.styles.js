@@ -34,6 +34,11 @@ export const Menu = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
+
+    @media screen and (max-width: 426px) {
+      width:200px;
+      height:200px;
+    }
 `;
 
 export const Button = styled.button`
@@ -50,5 +55,9 @@ export const Button = styled.button`
     :hover{
       transform: scale(1.05);
       transition: .5s;
+    }
+
+    @media screen and (max-width: 426px) {
+      width:200px;
     }
 `;

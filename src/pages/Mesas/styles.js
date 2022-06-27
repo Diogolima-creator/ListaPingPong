@@ -75,6 +75,12 @@ export const List = styled.div`
     border:2px solid black;
     border-radius:10px;
     color:black;  
+    overflow-y: scroll;
+    @media screen and (max-width: 426px) {
+      width:45vw;
+      font-size:14px;
+      font-weight:normal;
+    }
 `;
 
 export const ListPlayer = styled.ul`
@@ -85,6 +91,7 @@ export const ListPlayer = styled.ul`
     margin:0px;
     padding:0px;
     border-radius:10px;
+
 `;
 
 export const Players = styled.li`
@@ -95,7 +102,10 @@ export const Players = styled.li`
     height:30px;
     text-align:center;
     font-weight:bold;
-    
+
+    @media screen and (max-width: 426px) {
+      height: 50px;
+    }
 `;
 
 export const TableMesa = styled.div`
