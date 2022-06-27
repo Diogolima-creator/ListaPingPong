@@ -8,7 +8,7 @@ export const Container = styled.div`
   background-color: #87CEEB;
   width:100vw;
   height:100vh;
-
+  
   h1{
     margin:0px;
   }
@@ -46,6 +46,9 @@ export const Button = styled.button(({ mr }) => (`
       transition: .5s;
     }
 
+    @media screen and (max-width: 426px) {
+      margin-right:0px;
+    }
 `));
 
 export const ButtonClose = styled.button`
@@ -113,6 +116,10 @@ export const Players = styled.li`
 
 export const TableMesa = styled.div`
     margin:5px;
+
+    @media screen and (max-width: 426px) {
+      transform:scale(0.9);
+    }
 `;
 
 export const TableMesaTitle = styled.h1`
