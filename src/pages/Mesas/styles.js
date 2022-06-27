@@ -15,6 +15,7 @@ export const Container = styled.div`
 
   .Mesas-to-row{
       display:flex;
+      margin-left:5px;
   }
 `;
 
@@ -76,8 +77,10 @@ export const List = styled.div`
     border-radius:10px;
     color:black;  
     overflow-y: scroll;
+
     @media screen and (max-width: 426px) {
       width:45vw;
+      height:50vh;
       font-size:14px;
       font-weight:normal;
     }
