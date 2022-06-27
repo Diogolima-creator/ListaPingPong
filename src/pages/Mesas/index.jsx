@@ -1,5 +1,5 @@
 import * as C from './styles'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router';
 
 const Mesas = () => {
@@ -11,8 +11,10 @@ const Mesas = () => {
   const addPlayer = (num) => {
     if(num === 0 ){
       setArrayPlayers1([...arrayPlayers1, document.getElementById('inputPlayer1').value])
+      localStorage.setItem('playersMesa1', JSON.stringify([...arrayPlayers1, document.getElementById('inputPlayer1').value]))
     }else{
       setArrayPlayers2([...arrayPlayers2, document.getElementById('inputPlayer2').value])
+      localStorage.setItem('playersMesa2', JSON.stringify([...arrayPlayers2, document.getElementById('inputPlayer2').value]))
     }
   }
 
@@ -20,11 +22,20 @@ const Mesas = () => {
     if(num === 0 ){
       arrayPlayers1.splice(i,1)
       setArrayPlayers1([...arrayPlayers1])
+      localStorage.setItem('playersMesa1', JSON.stringify([...arrayPlayers1]))
     }else{
       arrayPlayers2.splice(i,1)
       setArrayPlayers2([...arrayPlayers2])
+      localStorage.setItem('playersMesa2', JSON.stringify([...arrayPlayers2]))
     }
   }
+
+  useEffect(() => {
+    if(localStorage.getItem('playersMesa1') !== null && localStorage.getItem('playersMesa2') !== null){
+      setArrayPlayers1(JSON.parse([localStorage.getItem('playersMesa1')]))
+      setArrayPlayers2(JSON.parse([localStorage.getItem('playersMesa2')]))
+    }  
+  },[])
 
   return (
     <C.Container>
