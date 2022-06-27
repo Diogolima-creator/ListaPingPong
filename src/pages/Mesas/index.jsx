@@ -12,9 +12,11 @@ const Mesas = () => {
     if(num === 0 ){
       setArrayPlayers1([...arrayPlayers1, document.getElementById('inputPlayer1').value])
       localStorage.setItem('playersMesa1', JSON.stringify([...arrayPlayers1, document.getElementById('inputPlayer1').value]))
+      document.getElementById('inputPlayer1').value = ''
     }else{
       setArrayPlayers2([...arrayPlayers2, document.getElementById('inputPlayer2').value])
       localStorage.setItem('playersMesa2', JSON.stringify([...arrayPlayers2, document.getElementById('inputPlayer2').value]))
+      document.getElementById('inputPlayer2').value = ''
     }
   }
 

@@ -10,6 +10,7 @@ const ListaUnica = () => {
   const addPlayer = () => {
     setArrayPlayers([...arrayPlayers, document.getElementById('inputPlayer').value])
     localStorage.setItem('players', JSON.stringify([...arrayPlayers, document.getElementById('inputPlayer').value]))
+    document.getElementById('inputPlayer').value = ''
   }
 
   const removePlayer = (i) => {
